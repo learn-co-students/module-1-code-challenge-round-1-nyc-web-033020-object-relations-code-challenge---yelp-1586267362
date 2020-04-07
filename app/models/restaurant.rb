@@ -10,7 +10,7 @@ class Restaurant
   end
 
   def customers
-    #Almost tripped myself up by writing .uniq! here. I did not realize before that will remove the unique items and return the remaining array.
+    #Almost tripped myself up by writing .uniq! here. I did not realize before that that will remove the unique items and return the remaining array.
     reviews.map {|review| review.customer}.uniq
   end
 
