@@ -17,7 +17,12 @@ class Customer
     @@all
   end
 
-  def self.find_by_name
+  def self.find_by_name(full_name)
+    self.all.find { |customer| customer.full_name == full_name } 
+  end
+
+  def self.find_all_by_given_name(given_name)
+    self.all.select { |customer| customer.given_name == given_name }
   end
   
   #helper method to get all reviews written

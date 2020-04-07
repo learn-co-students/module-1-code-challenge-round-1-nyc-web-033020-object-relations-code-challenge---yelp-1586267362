@@ -10,6 +10,7 @@ end
 carl = Customer.new("Carl", "Weathers")
 kip = Customer.new("Kip", "Kensington")
 sandy = Customer.new("Sandy", "Sanders")
+carl2 = Customer.new("Carl", "Dalton")
 
 burgerking = Restaurant.new("Burger King")
 mcdonalds = Restaurant.new("McDonalds")
@@ -24,7 +25,7 @@ r6 = Review.new(carl, ramenshop, 7)
 r7 = Review.new(carl, ramenshop, 10)
 
 r8 = sandy.add_review(burgerking, 6)
-
+r8 = carl2.add_review(mcdonalds, 4)
 
 
 binding.pry

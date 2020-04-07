@@ -19,4 +19,9 @@ class Restaurant
   def customers
     reviews.map { |review| review.customer}.uniq
   end
+
+  def average_star_rating
+    reviews.sum { |review| review.rating }.to_f / reviews.count
+  end
+  
 end
