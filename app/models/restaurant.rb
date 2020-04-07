@@ -19,7 +19,8 @@ class Restaurant
 
   def average_star_rating
     # Floating-point average of all this restaurant's reviews
-    self.reviews.map{ |review| review.rating }.sum.to_f / self.reviews.length    
+    (self.reviews.map{ |review| review.rating }
+      .sum.to_f / self.reviews.length).round(1) # Round to one decimal place
   end
 
   def self.all
