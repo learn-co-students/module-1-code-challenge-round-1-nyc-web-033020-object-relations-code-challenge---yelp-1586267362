@@ -21,9 +21,13 @@ class Restaurant
     reviews.select.uniq { |review| review.customer }
   end
 
+  def ratings
+    reviews.select { |review| review.rating.to_f }
+  end
+
   def average_star_rating
-    array = reviews.select { |review| review.rating }
-    array.rating.all.sum
+    total = ratings.map.sum { |review| review.rating.to_f }
+    total / reviews.count
   end
 
 end

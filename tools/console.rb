@@ -13,8 +13,8 @@ end
 
 steve_c = Customer.new("Steve", "Cases")
 rob_c = Customer.new("Rob", "Cases")
-steve_x = Customer.new("Steve", "Xu")
 pearl_x = Customer.new("Pearl", "Xu")
+tashawn_w = Customer.new("Tashawn", "Williams")
 
 
 dominos = Restaurant.new("Dominos Pizza")
@@ -23,12 +23,14 @@ jp = Restaurant.new("Jacob's Pickles")
 steve_c.add_review(dominos, 3)
 steve_c.add_review(dominos, 2)
 steve_c.add_review(jp, 5)
-steve_x.add_review(dominos, 2)
-steve_x.add_review(jp, 4)
+tashawn_w.add_review(dominos, 2)
+tashawn_w.add_review(jp, 4)
 rob_c.add_review(dominos, 5)
-rob_c.add_review(jp, 4)
+rob_c.add_review(jp, 5)
+tashawn_w.add_review(jp, 5)
+rob_c.add_review(jp, 3)
 pearl_x.add_review(dominos, 1)
-pearl_x.add_review(jp, 4)
+pearl_x.add_review(jp, 5)
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line 
