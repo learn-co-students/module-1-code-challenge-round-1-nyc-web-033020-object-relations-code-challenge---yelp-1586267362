@@ -21,7 +21,7 @@ restaurant4 = Restaurant.new("McDonald's")
 restaurant5 = Restaurant.new("Burger King")
 
 review1 = Review.new(customer1, restaurant2, 5)
-review2 = Review.new(customer2, restaurant2, 4)
+review2 = Review.new(customer2, restaurant2, 1)
 review3 = Review.new(customer2, restaurant1, 3)
 review4 = Review.new(customer4, restaurant4, 5)
 review5 = Review.new(customer5, restaurant2, 2)

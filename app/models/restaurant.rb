@@ -26,15 +26,19 @@ class Restaurant
   end
 
   def average_star_rating
-    total = 0
-    num_of_reviews = 0
+    # arr_of_ratings = reviews.map do |review|
+    #   review.rating
+    # end
+    # average = 0
+    # total = arr_of_ratings.reduce(0) {|sum, n| sum + n}
+    # average = (total / arr_of_ratings.length)
+    # puts total
+    # puts average
 
-    arr_of_reviews = reviews.map do |review|
+    review_arr = reviews.map do |review|
       review.rating
     end
-    num_of_reviews = arr_of_reviews.length
-    total = arr_of_reviews.reduce(0) {|sum, n| sum + n}
-    total / num_of_reviews
+    (review_arr.reduce(0) {|sum, n| sum + n}) / (review_arr.length).to_f
   end
 
 end
