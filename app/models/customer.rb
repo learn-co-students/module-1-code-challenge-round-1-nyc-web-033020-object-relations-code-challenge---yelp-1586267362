@@ -43,7 +43,7 @@ class Customer
     end 
   end 
 
-  def self.find_by_name(name)
+  def self.find_by_given_name(name)
     Customer.all.select do |person|
       person.given_name == name 
     end 
