@@ -12,7 +12,7 @@ class Restaurant
     end 
   end 
 
-  def customers 
+  def customers
     Review.all.select do |reviews|
       reviews.restaurant == self  
     end.map { |review| review.customer }
