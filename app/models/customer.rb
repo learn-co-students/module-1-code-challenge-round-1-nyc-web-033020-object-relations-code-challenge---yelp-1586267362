@@ -12,7 +12,7 @@ class Customer
   end
 
   def self.find_by_name(name)
-    full_names = Customer.all.map do |customer| 
+    Customer.all.map do |customer| 
       if customer.full_name == name
         return customer
       end
