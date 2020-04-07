@@ -38,6 +38,7 @@ other_michelle.add_review(bagel,5)
 
 # Method Tests
 # Customer.rb
+puts 'Customer Methods'
 puts mishy.given_name
 puts mishy.family_name
 puts mishy.full_name
@@ -59,6 +60,31 @@ puts Customer.find_by_name('Michelle Jocelyn')
 
 puts '.find_by_given_name(\'Michelle\')'
 puts Customer.find_by_given_name('Michelle')
+
+puts '.all'
+puts Customer.all
+
+# Restaurant.rb
+puts 'Restaurant Mehthods'
+puts 'talias.name'
+puts talias.name
+
+puts 'talias.reviews'
+puts talias.reviews
+
+puts 'talias.customers'
+puts talias.customers
+
+puts 'talias.average_star_rating'
+puts talias.average_star_rating
+
+puts '.all'
+puts Restaurant.all
+
+# Review.rb
+puts 'Review methods'
+puts '.all'
+puts Review.all
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
