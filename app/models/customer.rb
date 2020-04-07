@@ -32,7 +32,7 @@ class Customer
   end
 
   def restaurants
-    restaurants = reviews.map {|review| review.restaurant}.uniq!
+    restaurants = reviews.map {|review| review.restaurant}.uniq
   end
 
   def add_review(restaurant, rating)
