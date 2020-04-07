@@ -38,12 +38,13 @@ class Customer
 
   def self.find_by_name fullname
     # Find the first customer matching this name string (Sorry 'Bob Smith's)
-    Customer.all.find{ |customer| customer.full_name == fullname }
+    # Make statment lowercase to handle case mismatches
+    Customer.all.find{ |customer| customer.full_name.downcase == fullname.downcase }
   end
 
   def self.find_by_given_name name
     # Array of all customers matching firstname
-    Customer.all.select{ |customer| customer.given_name == name }
+    Customer.all.select{ |customer| customer.given_name.downcase == name.downcase }
   end
 
   def self.all 
