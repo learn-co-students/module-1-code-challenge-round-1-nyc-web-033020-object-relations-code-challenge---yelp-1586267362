@@ -18,4 +18,10 @@ class Restaurant
     reviews.map {|review|review.customer}.uniq
   end
 
+  def average_star_rating
+    sum = 0 
+    reviews.each {|review|sum += review.rating}
+    sum/reviews.count
+  end
+
 end
