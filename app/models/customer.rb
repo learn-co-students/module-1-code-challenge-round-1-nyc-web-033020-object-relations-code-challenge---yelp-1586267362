@@ -31,6 +31,7 @@ class Customer
   end
 
   def restaurants
+    # reviews.uniq { |review| review.restaurant } # trying something...
     unique_list = []
     reviews.each do |review| 
       if !unique_list.include?(review.restaurant) 

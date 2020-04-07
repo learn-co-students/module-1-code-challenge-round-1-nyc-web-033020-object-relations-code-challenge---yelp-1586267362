@@ -1,4 +1,5 @@
 class Restaurant
+  
   attr_reader :name
 
   @@all = []
@@ -23,5 +24,5 @@ class Restaurant
   def average_star_rating
     reviews.sum { |review| review.rating }.to_f / reviews.count
   end
-  
+
 end
