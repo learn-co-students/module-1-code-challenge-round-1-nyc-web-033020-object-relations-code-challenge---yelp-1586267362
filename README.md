@@ -8,6 +8,8 @@ For our purposes, a `Restaurant` has many `Reviews`, a `Customer` has many `Revi
 
 `Restaurant` - `Customer` is a many to many relationship.
 
+# Restaurant -{ Reviews }- Customer
+
 **Note**: You should draw your domain on paper or on a whiteboard _before you start coding_. Remember to identify a single source of truth for your data.
 
 ## Topics
