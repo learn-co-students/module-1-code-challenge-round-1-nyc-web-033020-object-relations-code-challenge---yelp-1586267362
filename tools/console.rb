@@ -18,16 +18,19 @@ lily = Customer.new("Lily", "Chen")
 mike = Customer.new("Mike", "Maw")
 
 #restaurants
-3star = Restaurant.new("Chomp")
-4star = Restaurant.new("Yum")
-5star = Restaurant.new("Slurp")
-2star = Restaurant.new("Gulp")
+chompy= Restaurant.new("Chomp")
+yum = Restaurant.new("Yum")
+slurp = Restaurant.new("Slurp")
+gulp = Restaurant.new("Gulp")
 
 #reviews
-r1 = Review.new("Good food", jack, 4star, 4)
-r2 = Review.new("Disgusting", lily, 2star, 2)
-r3 = Review.new("So, so", mike, 3star, 3)
-r4 = Review.new("It's so good", lisa, 5star, 5)
+r1 = Review.new("Good food", jack, slurp, 4)
+r2 = Review.new("Disgusting", lily, chompy, 2)
+r3 = Review.new("So, so", mike, chompy, 3)
+r4 = Review.new("It's so good", lisa, gulp, 5)
+r5 = Review.new("Quite alright", lisa, chompy, 3)
+r6 = Review.new("Could be better", lily, yum, 3)
+r7 = Review.new("Taste pretty good", jack, yum, 4)
 
 
 binding.pry

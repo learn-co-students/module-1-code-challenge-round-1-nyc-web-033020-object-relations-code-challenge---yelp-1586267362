@@ -16,14 +16,22 @@ class Customer
     @@all
   end
 
+  def reviews
+    Review.all.select do |review|
+      review.customer == self
+    end
+  end
+
   def restaurants
+    reviews.map {|review| review.restaurant}.uniq
   end
 
-  def add_review(self, restaurant, rating)
-    Review.new(name, self, restaurant, rating)
+  def add_review(restaurant, rating)
+    Review.new(restaurant, rating)
   end
 
-  def num_review
+  def self.num_review
+    self.reviews.count
   end
 
   def self.find_by_name(name)

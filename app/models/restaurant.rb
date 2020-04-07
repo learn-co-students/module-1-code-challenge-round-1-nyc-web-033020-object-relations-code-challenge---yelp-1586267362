@@ -13,15 +13,16 @@ class Restaurant
   end
 
   def reviews
-    Reviews.all.select do |review|
-      review.Restaurant == self
+    Review.all.select do |review|
+      review.restaurant == self
+    end
   end
 
   def customers
-    reviews.map {|review| review.customers}.uniq
+    reviews.map {|review| review.customer}.uniq
   end
 
-  def avg_star_rating
-    self.all.reduce(0) {|sum, restaurant|sum + restaurant.rating} / Restaurant.rating.count
+  def self.avg_star_rating
+    Restaurant.all.map {|restaurant| restaurant.rating}.sum.to_f / Restaurant.all.count
   end
 end

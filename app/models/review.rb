@@ -15,9 +15,15 @@ class Review
         @@all
     end
 
-    def customer
+    def customers
+        Customer.all.map do |customer|
+            customer.reviews
+        end
     end
 
-    def restaurant
+    def restaurants
+        Restaurant.all.map do |restaurant|
+            restaurant.reviews == self
+        end
     end
 end
