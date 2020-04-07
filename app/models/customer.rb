@@ -11,6 +11,15 @@ class Customer
     @@all
   end
 
+  def self.find_by_name(name)
+    full_names = Customer.all.map {|customer| customer.full_name}
+    full_names.select {|full_name| full_name == name}
+  end
+
+  def self.find_all_by_given_name(name)
+    Customer.all.select {|customer| customer.given_name == name}
+  end
+
   def full_name
     "#{given_name} #{family_name}"
   end
@@ -22,4 +31,13 @@ class Customer
   def restaurants
     restaurants = reviews.map {|review| review.restaurant}.uniq!
   end
+
+  def add_review(restaurant, rating)
+    Review.new(self, restaurant, rating)
+  end
+
+  def num_reviews
+    reviews.count
+  end
+
 end

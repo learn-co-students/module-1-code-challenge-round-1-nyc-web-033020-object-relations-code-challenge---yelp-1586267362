@@ -13,4 +13,9 @@ class Restaurant
     customers = reviews.map {|review| review.customer}.uniq!
   end
 
+  def average_star_rating
+    ratings = reviews.map {|review| review.rating}
+    reviews.inject {|memo, r| memo += r.rating} / reviews.count
+  end
+
 end

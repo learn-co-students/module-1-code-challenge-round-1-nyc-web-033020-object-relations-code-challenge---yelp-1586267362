@@ -8,6 +8,8 @@ end
 # so they will be available to test and play around with in your console
 
 john = Customer.new("John", "Smith")
+john_q = Customer.new("John", "Quincy")
+john_f = Customer.new("John", "Fredrickson")
 melissa = Customer.new("Melissa", "Rodriguez")
 garabed = Customer.new("Garabed", "Sahakian")
 ilya = Customer.new("Ilya", "Repin")
