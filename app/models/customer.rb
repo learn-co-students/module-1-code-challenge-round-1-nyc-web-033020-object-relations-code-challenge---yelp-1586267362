@@ -1,5 +1,7 @@
 class Customer
+  
   attr_accessor :given_name, :family_name
+  
   @@all = []
 
   def initialize(given_name, family_name)
@@ -7,6 +9,8 @@ class Customer
     @family_name  = family_name
     Customer.all << self
   end
+
+#--------------
 
   def full_name
     "#{given_name} #{family_name}"
@@ -24,13 +28,15 @@ class Customer
     end.uniq
   end
   
+  def num_reviews
+    reviews.count
+  end
+  
   def add_review(restaurant, rating)
     Review.new(self, restaurant, rating)
   end
 
-  def num_reviews
-    reviews.count
-  end
+#----------------
 
   def self.all
     @@all
