@@ -8,12 +8,17 @@ class Restaurant
   end
 
   def reviews
-    Review.all.select do |reviews|
-      reviews.restaurant == self
+    Review.all.select do |review|
+      review.restaurant == self
     end
-
+    
   end
-  binding.pry
+  def customers
+    self.review.map do |review|
+      review.customer.uniq
+    end
+  end
+
 
 
 end
