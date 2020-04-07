@@ -12,9 +12,4 @@ class Review
     def self.all 
         @@all
     end
-
-    # def rating
-
-    # end
-
 end

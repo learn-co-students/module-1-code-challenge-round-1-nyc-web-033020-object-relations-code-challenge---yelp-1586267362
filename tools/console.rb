@@ -8,7 +8,7 @@ end
 # so they will be available to test and play around with in your console
 
 c1 = Customer.new("Edgar", "Rivera")
-c2 = Customer.new("Ben", "Smith")
+c2 = Customer.new("Edgar", "Smith")
 c3 = Customer.new("Lei", "Brutus")
 
 rest1 = Restaurant.new("Pizza Joint")
