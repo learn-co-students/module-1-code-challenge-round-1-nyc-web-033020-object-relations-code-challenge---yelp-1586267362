@@ -12,6 +12,7 @@ class Customer
   end
 
   def self.find_by_name(name)
+    # I coul make this into one line by appending everything after .select to the map enumerator, but that would hinder readability.
     full_names = Customer.all.map {|customer| customer.full_name}
     full_names.select {|full_name| full_name == name}
   end

@@ -111,12 +111,12 @@ Some of the methods listed are provided to you in the starter code. You should c
   - given a string of a **full name**, returns the **first customer** whose full name matches -->
 <!-- - `Customer.find_all_by_given_name(name)`
   - given a string of a given name, returns an **array** containing all customers with that given name -->
-
+<!-- 
 #### Restaurant
 
 - `Restaurant#average_star_rating`
   - returns the average star rating for a restaurant based on its reviews
-  - Reminder: you can calculate the average by adding up all the ratings and dividing by the number of ratings
+  - Reminder: you can calculate the average by adding up all the ratings and dividing by the number of ratings -->
 
 ## Rubric
 
