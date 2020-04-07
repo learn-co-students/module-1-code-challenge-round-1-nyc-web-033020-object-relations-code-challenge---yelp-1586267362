@@ -13,9 +13,9 @@ class Restaurant
   end 
 
   def customers 
-    reviews.map do |reviews|
-      reviews.customer 
-    end 
+    Review.all.select do |reviews|
+      reviews.restaurant == self  
+    end.map { |review| review.customer }
   end 
 
   def ratings_by_restuart 
