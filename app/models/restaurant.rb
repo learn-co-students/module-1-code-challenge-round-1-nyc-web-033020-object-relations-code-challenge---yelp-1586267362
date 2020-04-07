@@ -18,6 +18,12 @@ class Restaurant
     end 
   end 
 
+  def ratings_by_restuart 
+    Review.all.select do |review|
+      review.restaurant == self 
+    end.map{ |review| review.rating }
+  end 
+
   def how_many_customers 
     Review.all.select do |review| 
       review.restaurant == self 
@@ -26,7 +32,7 @@ class Restaurant
 
   def average_star_rating 
     #binding.pry 
-    how_many_customers / reviews.count 
+    ratings_by_restuart.sum / how_many_customers
   end 
 
 end

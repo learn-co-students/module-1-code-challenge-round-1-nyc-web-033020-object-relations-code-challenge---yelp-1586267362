@@ -9,6 +9,7 @@ end
 
 liz = Customer.new("Liz", "Karen")
 kenji = Customer.new("Kenji","Mason")
+kylie = Customer.new("Kylie", "Russel")
 
 pizza = Restaurant.new("PizzaPlace")
 pasta = Restaurant.new("Spagetti Girl")
@@ -16,7 +17,9 @@ pasta = Restaurant.new("Spagetti Girl")
 review1 = Review.new(liz, pizza, 5)
 review2 = Review.new(kenji, pasta, 1)
 review3 = Review.new(liz, pasta, 10)
-
+review4 = Review.new(liz, pasta, 15)
+review4 = Review.new(kylie, pasta, 18)
+review5 = Review.new(kylie, pizza, 4)
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
