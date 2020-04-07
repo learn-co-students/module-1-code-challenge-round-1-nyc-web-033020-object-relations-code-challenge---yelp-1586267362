@@ -25,8 +25,14 @@ class Customer
     Review.all.select { |review| review.customer == self }
   end
 
+  
+  # def restaurants
+  #   reviews.map.uniq { |review| review.restaurant == self }
+  # end
+
   def restaurants
-    customer_reviews.map.uniq { |review| review.restaurant == self }
+    array = reviews.select.uniq { |review| review.restaurant == self }
+    array.map { |review| review.restaurant.name }
   end
 
   def num_reviews

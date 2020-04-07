@@ -17,8 +17,15 @@ class Restaurant
     Review.all.select { |review| review.restaurant == self }
   end
   
+  #THIS IS MY INITIAL METHOD BUT IT RETURNS AN ARRAY FOR EACH CUSTOMER SO I FILTERED DOWN IN THE METHOD BELOW THIS ONE
+  #FEEL FREE TO UNCOMMENT THIS METHOD AND COMMENT-OUT THE ONE BELOW IF THAT'S WHAT YOU'RE LOOKING FOR
+  # def customers
+  #   reviews.select.uniq { |review| review.customer }
+  # end
+
   def customers
-    reviews.select.uniq { |review| review.customer }
+    array = reviews.select.uniq { |review| review.customer }
+    array.map { |review| review.customer.full_name }
   end
 
   def ratings
