@@ -15,10 +15,11 @@ class Restaurant
   end
 
   def average_star_rating
+    # I wanted to use one line here, but I don't know how to crack open objects with inject properly.
+    # rating_total = reviews.inject {|memo, (review, rating)| memo + review.rating}
     ratings = reviews.map {|review| review.rating}
     rating_total = ratings.inject {|memo, r| memo + r}
     rating_total / reviews.count
-    # reviews.inject {|memo, r| memo += r.rating} / reviews.count
   end
 
 end
