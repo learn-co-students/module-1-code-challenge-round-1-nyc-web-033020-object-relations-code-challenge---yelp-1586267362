@@ -28,13 +28,13 @@ michelle.add_review(talias,4)
 michelle.add_review(secondave,4)
 michelle.add_review(secondave,5)
 michelle.add_review(bagel,4)
-michelle.add_review(bagel,3)
+michelle.add_review(bagel,1)
 
 other_michelle.add_review(talias,3)
 other_michelle.add_review(secondave,3)
 other_michelle.add_review(secondave,4)
 other_michelle.add_review(bagel,4)
-other_michelle.add_review(bagel,5)
+other_michelle.add_review(bagel,2)
 
 # Method Tests
 # Customer.rb
