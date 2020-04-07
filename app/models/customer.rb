@@ -5,6 +5,7 @@ class Customer
   def initialize(given_name, family_name)
     @given_name = given_name
     @family_name  = family_name
+    Customer.all << self
   end
 
   def full_name
@@ -15,7 +16,7 @@ class Customer
     
   end
 
-  def add_review restaurant rating
+  def add_review restaurant, rating
 
   end
 
