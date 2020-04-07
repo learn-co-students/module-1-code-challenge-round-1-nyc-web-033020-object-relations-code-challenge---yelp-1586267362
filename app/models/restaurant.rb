@@ -13,9 +13,9 @@ class Restaurant
     self.reviews.count
   end
   def average_star_rating
-    review_sum = 0
-    self.reviews.select {|key| review_sum += key.rating}
-    review_sum / self.nb_of_reviews * 1.0
+    rating_sum = 0
+    self.reviews.select {|key| rating_sum += key.rating}
+    rating_sum / self.nb_of_reviews * 1.0
   end
 
 end

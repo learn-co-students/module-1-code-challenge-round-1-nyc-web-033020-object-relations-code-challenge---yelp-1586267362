@@ -29,15 +29,16 @@ class Customer
     self.reviews.count
   end
   def self.find_by_name(name)
-    array = name.split
-    answer = nil
+    name_in_array = name.split
+    customer_found = nil
     Customer.all.find do |key| 
-      if key.given_name == array[0] && key.family_name == array[1]        
-        answer = key
+      if key.given_name == name_in_array[0] && key.family_name == name_in_array[1]        
+        customer_found = key
       end
     end
-    answer
+    customer_found
   end
+
   def self.find_all_by_given_name(name)
     Customer.all.select{|key| key.given_name == name}
   end
