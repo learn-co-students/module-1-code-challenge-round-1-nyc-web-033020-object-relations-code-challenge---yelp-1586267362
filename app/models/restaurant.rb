@@ -12,15 +12,21 @@ class Restaurant
   end
 
   def reviews
-    Reviews.all.select { |review| review.restaurant == self }
+    Review.all.select { |review| review.restaurant == self }
   end
 
   def customers
-    Reviews.all.select do |review|
+    Review.all.select do |review|
       if reviews.restaurant == self
         review.customer.uniq
       end
     end
+  end
+
+  def average_star_rating
+    # ratings_arr =
+    reviews
+    # ratings_arr
   end
 
 

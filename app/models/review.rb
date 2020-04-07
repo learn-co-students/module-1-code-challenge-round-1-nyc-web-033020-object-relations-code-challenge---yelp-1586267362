@@ -14,13 +14,18 @@ class Review
     @@all
   end
 
-  def customer(customer)
-    Review.all.find { |review| review.customer == customer }
-    #test return on both
+  def self.count
+    @@all.length
   end
 
-  def restaurant(restaurant)
+  def customer
+    Review.all.find { |review| review.customer == customer }
+    #needs review stack level error
+  end
+
+  def restaurant
     Review.all.select { |review| review.restaurant == restaurant}
+    #needs review stack level error
   end
 
 end
