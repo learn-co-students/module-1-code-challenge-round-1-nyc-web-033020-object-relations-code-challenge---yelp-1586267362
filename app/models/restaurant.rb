@@ -10,7 +10,7 @@ class Restaurant
     Review.all.select do |review|
       review.restaurant == self 
     end 
-  end 
+  end
 
   def customers
     Review.all.select do |reviews|
