@@ -12,7 +12,7 @@ class Customer
     "#{given_name} #{family_name}"
   end
 
-  def reviews
+  def reviews # Helper method for later aggregate methods
     Review.all.select{ |review| review.customer == self }
   end
 
@@ -21,7 +21,12 @@ class Customer
   end
 
   def add_review restaurant, rating
-    Review.new(self,restaurant,rating)
+    # Rating should be a float or int between 0-5
+    if (rating.class == Float || rating.class == Integer) && (rating >= 0 && rating <= 5) 
+      Review.new(self,restaurant,rating)
+    else
+      puts 'Please enter a whole number or decimal between 0 and 5'
+    end
   end
 
   def num_reviews
